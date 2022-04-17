@@ -1,0 +1,60 @@
+.my-login form {
+  border: 3px solid #f1f1f1;
+}
+
+.my-login input[type="text"],
+.my-login input[type="password"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.my-login button {
+  background-color: #04aa6d;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+.my-login button:hover {
+  opacity: 0.8;
+}
+
+.my-login .cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+.my-login .imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+}
+
+.my-login img.avatar {
+  width: 30%;
+  border-radius: 50%;
+}
+
+.my-login .container {
+  padding: 16px;
+}
+
+.my-login .main.container {
+  padding-top: 150px;
+}
+
+.my-login .form.container {
+  width: auto;
+}
+
+.my-login span.psw {
+  float: right;
+  padding-top: 16px;
+}
