@@ -58,8 +58,7 @@ h3,
 h4,
 h5,
 h6,
-h1 a,
-h1 a {
+h1 a, h4 a {
   font-family: "Special Elite", cursive;
 }
 .mr-lg-5,
@@ -1320,4 +1319,41 @@ section {
 
 .modal-footer .cancelbtn {
   background-color: #f44336;
+}
+.travel-grids1 .grids5-info h5 {
+    font-size: 16px;
+    line-height: 25px;
+    color: #365e11;
+    margin-top: 10px;
+}
+.travel-grids1 h4, .grids-1 h4{
+    margin: 0;
+    padding: 0;
+    color: #151b1d;
+    font-weight: 700;
+    font-size: 1.5em;
+    font-family: "Special Elite", cursive;
+}
+/* Destination Page  */
+.grids-1 .info {
+    padding: 20px 0px;
+}
+.grids-1 .dst-btm {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    align-items: center;
+    border-top: 1px solid #ddd;
+    margin-top: 16px;
+    padding-top: 10px;
+}
+.grids-1 .dst-btm h6 {
+    font-size: 16px;
+    font-weight: 400;
+    color: #151b1d;
+}
+.grids-1 .dst-btm span {
+    text-align: right;
+    font-size: 16px;
+    font-weight: 600;
+    color: #365e11;
 }
