@@ -42,16 +42,16 @@
   border-radius: 50%;
 }
 
-.my-login .container {
+.container {
   padding: 16px;
+  width: auto;
 }
 
 .my-login .main.container {
   padding-top: 150px;
-}
-
-.my-login .form.container {
-  width: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .my-login span.psw {
@@ -90,4 +90,15 @@ hr {
 .signin {
   background-color: #f1f1f1;
   text-align: center;
+}
+
+#loginForm {
+  margin-top: 10px;
+}
+
+@media (min-width: 768px) {
+  .my-login form {
+    border: 3px solid #f1f1f1;
+    max-width: 500px;
+  }
 }
