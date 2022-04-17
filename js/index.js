@@ -1,9 +1,7 @@
 // Constants
-const emailInput = document.querySelector('#email');
-const passwordInput = document.querySelector('#password');
-const rememberMe = document.querySelector('#remember');
+const userName = document.querySelector('#userName');
+const logoutBtn = document.querySelector('#logout');
 
-const form = document.querySelector('#loginForm');
 
 // Create an instance of a db object for us to store the open database in
 let db;
@@ -21,6 +19,7 @@ window.onload = function () {
   // onsuccess handler signifies that the database opened successfully
   request.onsuccess = function () {
     console.log('Database opened succesfully');
+    checkLogin()
 
     // Store the opened database object in the db variable. This is used a lot below
     db = request.result;
@@ -56,67 +55,34 @@ window.onload = function () {
     //
     console.log('Database setup complete');
     //  alert("setup done");
+    checkLogin()
   };
   // -------------------- For DB END --------------------
 
-  // Create an onsubmit handler so that when the form is submitted the login() function is run
-  form.onsubmit = login;
+  function checkLogin() {
+    let user = localStorage.getItem('user');
+    user = user ? user : sessionStorage.getItem('user');
 
-  // Define the login() function
-  function login(e) {
-    // prevent default - we don't want the form to submit in the conventional way
-    e.preventDefault();
+    const isLoggedIn = user ? true : false;
 
-    // open a read/write db transaction, ready for adding the data
-    let transaction = db.transaction(['users'], 'readonly');
-
-    let objectStore = transaction.objectStore('users');
-    var request = objectStore.getAll()
-
-    request.onsuccess = function (e) {
-      var result = e.target.result;
-      console.log('request', result)
-
-      //alert(result);
-      if (typeof (result) == "undefined") {
-        alert("Invalid User");
-      }
-      else {
-        var user = result.find(x => x.email.toLowerCase() == emailInput.value.toLowerCase())
-        if (user) {
-          if (user.password == passwordInput.value) {
-            console.log("Login successful");
-            alert("Login Successful !!");
-
-            sessioninfo({ ...user, rememberMe: rememberMe.checked });
-          }
-          else {
-            console.log("Invalid Password");
-            alert("Invalid Password !!");
-          }
-        } else {
-          alert("User Not Found");
-        }
-
-      }
-      // console.dir(result);
-    }
-    request.onerror = function (e) {
-      console.log("Invalid ID");
-      console.dir(e);
+    if (isLoggedIn) {
+      document.querySelector('#userName').innerHTML = JSON.parse(user).name;
+      document.querySelector("#login-block").style.display = 'none'
+      document.querySelector("#loggedIn-block").style.display = 'block'
+    } else {
+      document.querySelector("#login-block").style.display = 'block'
+      document.querySelector("#loggedIn-block").style.display = 'none'
     }
   }
+
+  logoutBtn.addEventListener('click', event => {
+    localStorage.removeItem('user');
+    sessionStorage.removeItem('user');
+    alert("Logout successfull.")
+    checkLogin()
+  });
+
 
 };
 
-function sessioninfo(user) {
-  if (user.rememberMe) {
-    // store locally
-    localStorage.setItem('user', JSON.stringify(user))
-  } else {
-    // store temporarily in session
-    sessionStorage.setItem('user', JSON.stringify(user))
-  }
-  window.location.href = "index.html";
-}
 

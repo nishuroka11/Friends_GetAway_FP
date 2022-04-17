@@ -17,6 +17,9 @@
   <link href="css/style.css" rel="stylesheet" />
   <link href="css/responsive.css" rel="stylesheet" />
 
+  <!-- js -->
+  <script src="js/index.js" defer></script>
+
   <title>Get Away</title>
 </head>
 
@@ -55,9 +58,19 @@
             </li>
           </ul>
         </div>
-        <div class="d-lg-block d-none">
+        <div class="d-lg-block d-none" id="login-block">
           <a href="login.html" class="btn btn-style btn-secondary">Login</a>
           <a href="registration.html" class="btn btn-style btn-secondary">Register</a>
+        </div>
+        <div class="d-lg-block d-none" id="loggedIn-block">
+          <div class="dropdown">
+            <span class="d-flex"><i class="icofont-ui-user" style="padding-right: 10px"></i>
+              <p>Hi <span id="userName"></span></p>
+            </span>
+            <div class="dropdown-content">
+              <a id="logout">Logout</a>
+            </div>
+          </div>
         </div>
       </nav>
     </div>

@@ -11,6 +11,7 @@ const form = document.querySelector('#registrationForm');
 let db;
 
 window.onload = function () {
+  // -------------------- For DB --------------------
   // Open our database; it is created if it doesn't already exist
   let request = window.indexedDB.open('getAwayDB', 1);
 
@@ -58,6 +59,7 @@ window.onload = function () {
     console.log('Database setup complete');
     //  alert("setup done");
   };
+  // -------------------- For DB END --------------------
 
   // Create an onsubmit handler so that when the form is submitted the register() function is run
   form.onsubmit = register;
