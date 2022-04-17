@@ -149,6 +149,9 @@
 }
 
 @media (min-width: 992px) {
+    .text-lg-center {
+        text-align: center !important;
+    }
   .mt-lg-0,
   .my-lg-0 {
     margin-top: 0 !important;
