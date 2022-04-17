@@ -11,6 +11,18 @@
 }
 
 @media (min-width: 576px) {
+  .pb-sm-5,
+  .py-sm-5 {
+    padding-bottom: 3rem !important;
+  }
+  .pt-sm-5,
+  .py-sm-5 {
+    padding-top: 3rem !important;
+  }
+  .mt-sm-0,
+  .my-sm-0 {
+    margin-top: 0 !important;
+  }
   .navbar-expand-sm {
     flex-flow: row nowrap;
     justify-content: flex-start;
@@ -69,13 +81,14 @@
 }
 
 @media (min-width: 768px) {
-    .mt-md-0, .my-md-0 {
-        margin-top: 0 !important;
-    }
-    .col-md-4 {
-        flex: 0 0 33.33333%;
-        max-width: 33.33333%;
-    }
+  .mt-md-0,
+  .my-md-0 {
+    margin-top: 0 !important;
+  }
+  .col-md-4 {
+    flex: 0 0 33.33333%;
+    max-width: 33.33333%;
+  }
   .navbar-expand-md {
     flex-flow: row nowrap;
     justify-content: flex-start;
@@ -110,6 +123,9 @@
 
   .navbar-expand-md .navbar-toggler {
     display: none;
+  }
+  .travel-grids1 .col-md-4 {
+    max-width: 30.33333%;
   }
 }
 

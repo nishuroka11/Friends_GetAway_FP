@@ -228,6 +228,7 @@ nav .active a {
 /* header */
 .fixed-top {
   position: fixed;
+  top: 0;
   right: 0;
   left: 0;
   z-index: 1030;
@@ -641,7 +642,7 @@ header {
 }
 /* travel-grid */
 .travel-grids img,
-.best-rooms img {
+.best-rooms img, .travel-cta4 img, .travel-grids1 img{
   border-radius: 10px;
 }
 .travel-grids {
@@ -1045,11 +1046,11 @@ section {
   cursor: pointer;
   width: 50px;
   height: 45px;
-  background: var(--primary-color);
+  background: #365e11;
   padding: 0;
   opacity: 0.7;
   transition: 0.3s ease;
-  border-radius: var(--border-radius);
+  border-radius: 8px;
 }
 
 .travel-footer #movetop:hover {
@@ -1074,7 +1075,7 @@ section {
 }
 
 .travel-footer ul.social li a {
-  color: var(--heading-color);
+  color: #151b1d;
   width: 36px;
   height: 36px;
   line-height: 36px;
@@ -1084,7 +1085,7 @@ section {
 }
 
 .travel-footer ul.social li a:hover {
-  background: var(--secondary-color);
+  background: #e9ecef;
   transition: 0.3s ease;
   color: #fff;
 }
@@ -1095,3 +1096,84 @@ section {
 }
 
 /* ====================== Login Page ====================== */
+/* breadcrumb */
+.travel-about-breadcrumb {
+    margin-top: 90px;
+    background: url(../images/banner2.jpeg) no-repeat center;
+    background-size: cover;
+    position: relative;
+    z-index: 0;
+    display: grid;
+    align-items: center;
+    padding: 1em 0;
+  }
+  
+  .travel-about-breadcrumb h2.title {
+    font-size: 38px;
+    font-weight: 700;
+    color: #fff;
+  }
+  
+  .travel-about-breadcrumb::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    min-height: 100%;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    background-color: #161B1D;
+    opacity: .7;
+  }
+  
+  .travel-about-breadcrumb .breadcrumbs-custom-path li {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 1em;
+    line-height: 1.5;
+    font-weight: 400;
+    text-transform: capitalize;
+    color: #fff;
+  }
+  
+  ul.breadcrumbs-custom-path li a {
+    color: var(--secondary-color);
+  }
+  
+  .travel-about-breadcrumb .breadcrumbs-custom-path li span.fa {
+    font-size: 12px;
+    vertical-align: 2px;
+  }
+  
+  @media (max-width:991px) {
+    .travel-about-breadcrumb {
+      margin-top: 68px;
+    }
+  }
+  
+  @media (max-width:640px) {
+    .travel-about-breadcrumb h2.title {
+      font-size: 34px;
+    }
+  
+    .travel-about-breadcrumb {
+      margin-top: 68px;
+    }
+  }
+  
+  @media (max-width:600px) {
+    .travel-about-breadcrumb h2.title {
+      font-size: 30px;
+    }
+}
+/* about  */
+.ab-section {
+    max-width: 750px;
+    margin: 0 auto;
+  }
+  
+  .travel-content-6 {
+    background: #936be80d ;
+  }
+  
