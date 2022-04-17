@@ -70,6 +70,7 @@
               <p>Hi <span id="userName"></span></p>
             </span>
             <div class="dropdown-content">
+              <a id="openModal">Change Password</a>
               <a id="logout">Logout</a>
             </div>
           </div>
@@ -477,6 +478,37 @@
       </div>
     </div>
   </footer>
+
+
+  <!-- The Modal -->
+  <div id="myModal" class="modal">
+
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="close">&times;</span>
+        <h2>Change Password</h2>
+      </div>
+      <div class="modal-body">
+        <form id="changePwForm">
+          <div class="form container">
+            <label for="password"><b>Old Password</b></label>
+            <input type="password" placeholder="Enter Old Password" name="password" id="password" required>
+
+            <label for="newPassword"><b>New Password</b></label>
+            <input type="password" placeholder="Enter Password" name="newPassword" id="newPassword" required>
+
+            <label for="repeatPassword"><b>Re-enter Password</b></label>
+            <input type="password" placeholder="Re-enter Password" name="repeatPassword" id="repeatPassword" required>
+          </div>
+
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button id="changePassBtn">Change Password</button>
+        <button class="cancelbtn" id="cancelChangePassBtn">cancel</button>
+      </div>
+    </div>
+  </div>
 
   <!-- for banner  -->
   <script>
