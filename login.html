@@ -18,6 +18,8 @@
   <link href="css/responsive.css" rel="stylesheet" />
   <link href="css/login.css" rel="stylesheet" />
 
+  <script src="js/login.js" defer></script>
+
   <title>Get Away</title>
 </head>
 
@@ -68,21 +70,21 @@
     <div class="main container">
       <h2>Login Form</h2>
 
-      <form action="/action_page.php" method="post">
+      <form id="loginForm">
         <div class="imgcontainer">
           <img src="images/img_avatar2.png" alt="Avatar" class="avatar">
         </div>
 
         <div class="form container">
-          <label for="uname"><b>Username</b></label>
-          <input type="text" placeholder="Enter Username" name="uname" required>
+          <label for="email"><b>Email</b></label>
+          <input type="text" placeholder="Enter Username" name="email" id="email" required>
 
-          <label for="psw"><b>Password</b></label>
-          <input type="password" placeholder="Enter Password" name="psw" required>
+          <label for="password"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="password" id="password" required>
 
           <button type="submit">Login</button>
           <label>
-            <input type="checkbox" checked="checked" name="remember"> Remember me
+            <input type="checkbox" checked="checked" name="remember" id="remember"> Remember me
           </label>
         </div>
 
@@ -170,35 +172,6 @@
     </div>
   </footer>
 
-  <!-- for banner  -->
-  <script>
-    let slideIndex = 1;
-    showSlides(slideIndex);
-
-    function plusSlides(n) {
-      showSlides((slideIndex += n));
-    }
-
-    function currentSlide(n) {
-      showSlides((slideIndex = n));
-    }
-
-    function showSlides(n) {
-      let i;
-      let slides = document.getElementsByClassName("mySlides");
-      if (n > slides.length) {
-        slideIndex = 1;
-      }
-      if (n < 1) {
-        slideIndex = slides.length;
-      }
-      for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-      }
-
-      slides[slideIndex - 1].style.display = "block";
-    }
-  </script>
 </body>
 
 </html>

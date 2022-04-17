@@ -1,11 +1,9 @@
 // Constants
 const emailInput = document.querySelector('#email');
 const passwordInput = document.querySelector('#password');
-const confirmPasswordInput = document.querySelector('#confirmPsw');
-const nameInput = document.querySelector('#name');
-const chkInput = document.querySelector('#chk');
+const rememberMe = document.querySelector('#remember');
 
-const form = document.querySelector('#registrationForm');
+const form = document.querySelector('#loginForm');
 
 // Create an instance of a db object for us to store the open database in
 let db;
@@ -59,69 +57,64 @@ window.onload = function () {
     //  alert("setup done");
   };
 
-  // Create an onsubmit handler so that when the form is submitted the register() function is run
-  form.onsubmit = register;
+  // Create an onsubmit handler so that when the form is submitted the login() function is run
+  form.onsubmit = login;
 
-  // Define the register() function
-  function register(e) {
+  // Define the login() function
+  function login(e) {
     // prevent default - we don't want the form to submit in the conventional way
     e.preventDefault();
-    if (chkInput.checked) {
-      if (confirmPasswordInput.value == passwordInput.value) {
-        if (validateEmail(emailInput.value)) {
-          // grab the values entered into the form fields and store them in an object ready for being inserted into the DB
-          let newUser = {
-            password: passwordInput.value,
-            name: nameInput.value,
-            email: emailInput.value
-          };
 
-          // open a read/write db transaction, ready for adding the data
-          let transaction = db.transaction(['users'], 'readwrite');
+    // open a read/write db transaction, ready for adding the data
+    let transaction = db.transaction(['users'], 'readonly');
 
-          // call an object store that's already been added to the database
-          let objectStore = transaction.objectStore('users');
+    let objectStore = transaction.objectStore('users');
+    var request = objectStore.getAll()
 
-          // Make a request to add our newUser object to the object store
-          var request = objectStore.add(newUser);
-          request.onsuccess = function () {
-            alert("Registration Successful..Redirecting to Login Page !!");
+    request.onsuccess = function (e) {
+      var result = e.target.result;
+      console.log('request', result)
 
-            window.location.href = "login.html";
+      //alert(result);
+      if (typeof (result) == "undefined") {
+        alert("Invalid User");
+      }
+      else {
+        var user = result.find(x => x.email.toLowerCase() == emailInput.value.toLowerCase())
+        if (user) {
+          if (user.password == passwordInput.value) {
+            console.log("Login successful");
+            alert("Login Successful !!");
 
-          };
-
-          // Report on the success of the transaction completing, when everything is done
-          transaction.oncomplete = function () {
-            console.log('Transaction completed: database modification finished.');
-
-          };
-
-          transaction.onerror = function () {
-            console.log('Transaction not opened due to error');
-          };
+            sessioninfo({ ...user, rememberMe: rememberMe.checked });
+          }
+          else {
+            console.log("Invalid Password");
+            alert("Invalid Password !!");
+          }
         } else {
-          alert("Invalid Email");
+          alert("User Not Found");
         }
 
-      } else {
-        alert("Password and confirm password doesn't match.");
       }
-
-
+      // console.dir(result);
     }
-    else {
-      alert("Kindly confirm the checkbox before proceeding");
+    request.onerror = function (e) {
+      console.log("Invalid ID");
+      console.dir(e);
     }
-
   }
 
-  function validateEmail(email) {
-    return String(email)
-      .toLowerCase()
-      .match(
-        /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-      );
-  };
-
 };
+
+function sessioninfo(user) {
+  if (user.rememberMe) {
+    // store locally
+    localStorage.setItem('user', JSON.stringify(user))
+  } else {
+    // store temporarily in session
+    sessionStorage.setItem('user', JSON.stringify(user))
+  }
+  window.location.href = "home.html";
+}
+
