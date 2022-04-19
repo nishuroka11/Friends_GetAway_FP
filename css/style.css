@@ -1,11 +1,8 @@
 /* offset */
 * {
   padding: 0;
-<<<<<<< HEAD
-  /* overflow-x: hidden; */
-=======
   margin: auto;
->>>>>>> 0810b525b1c39e6769a7dad296a295b7cf049ab5
+  /* overflow-x: hidden; */
 }
 .container {
   width: 1178px;
@@ -14,10 +11,6 @@
   margin-right: auto;
   margin-left: auto;
 } 
-.container {
-  width: 80%;
-  margin: auto;
-}
 ul li {
   list-style: none;
   display: inline-block;
@@ -937,7 +930,7 @@ section {
 }
 
 .travel-footer span.color-ubd {
-  color: var(--font-color);
+  color: #000;
   opacity: 0.5;
   font-weight: 500;
   font-size: 16px;
@@ -1412,7 +1405,7 @@ ul.breadcrumbs-custom-path li a {
 }
 
 .pricing .pricing {
-  color: var(--heading-color);
+  color: #365e11;
   line-height: 32px;
   font-size: 42px;
   text-align: right;
@@ -1427,7 +1420,7 @@ ul.breadcrumbs-custom-path li a {
 }
 
 .pricing .pri {
-  color: var(--font-color);
+  color: #000;
   line-height: 25px;
   font-size: 17px;
   vertical-align: super;
@@ -1435,7 +1428,7 @@ ul.breadcrumbs-custom-path li a {
 }
 
 .pricing .pri1 {
-  color: var(--heading-color);
+  color: #365e11;
   text-align: right;
   line-height: 25px;
   font-size: 20px;
@@ -1444,7 +1437,7 @@ ul.breadcrumbs-custom-path li a {
 }
 
 .pricing .price-title {
-  color: var(--font-color);
+  color: #000;
   line-height: 20px;
   font-size: 17px;
   font-weight: 400;
@@ -1490,8 +1483,7 @@ ul.breadcrumbs-custom-path li a {
     font-weight: 700;
   }
   
-  .pricing .price-number {
-  }
+
 
   .pricing .grid {
     display: grid;
@@ -1501,7 +1493,7 @@ ul.breadcrumbs-custom-path li a {
   }
   
   .pricing .pri {
-    color: var(--font-color);
+    color: #000;
     line-height: 25px;
     font-size: 17px;
     vertical-align: super;
@@ -1518,7 +1510,7 @@ ul.breadcrumbs-custom-path li a {
   }
   
   .pricing .price-title {
-    color: var(--font-color);
+    color: #000;
     line-height: 20px;
     font-size: 17px;
     font-weight: 400;
@@ -1576,7 +1568,7 @@ ul.breadcrumbs-custom-path li a {
   }
   
   .travel-contact .cont-details p {
-    color: var(--font-color);
+    color: #000;
     font-size: 18px;
     line-height: 28px;
     font-weight: 400;
@@ -1592,7 +1584,7 @@ ul.breadcrumbs-custom-path li a {
   .travel-contact .hours p {
     font-size: 16px;
     margin-bottom: 10px;
-    color: var(--font-color);
+    color: #000;
         max-width: 350px;}
 @media (max-width: 667px) {
   .pricing .grid {
@@ -1615,14 +1607,14 @@ ul.breadcrumbs-custom-path li a {
 
 /* Contact Page */
 .travel-contact .cont-details h5 {
-  color: var(--heading-color);
+  color: #365e11;
   font-size: 40px;
   line-height: 48px;
   font-weight: 600;
 }
 
 .travel-contact .cont-details p {
-  color: var(--font-color);
+  color: #000;
   font-size: 18px;
   line-height: 28px;
   font-weight: 400;
@@ -1630,7 +1622,7 @@ ul.breadcrumbs-custom-path li a {
 }
 
 .travel-contact .hours h6 {
-  color: var(--heading-color);
+  color: #365e11;
   font-size: 18px;
   line-height: 25px;
 }
@@ -1638,12 +1630,12 @@ ul.breadcrumbs-custom-path li a {
 .travel-contact .hours p {
   font-size: 16px;
   margin-bottom: 10px;
-  color: var(--font-color);
+  color: #000;
   max-width: 350px;
 }
 
 .travel-contact .hours p a {
-  color: var(--font-color);
+  color: #000;
 }
 
 .travel-contact .hours p a:hover {
@@ -1656,17 +1648,17 @@ ul.breadcrumbs-custom-path li a {
   font-style: normal;
   font-family: inherit;
   border: none;
-  color: var(--heading-color);
+  color: #365e11;
   font-size: 16px;
   width: 100%;
   height: 55px;
-  background: var(--bg-color);
+  background: #fff;
   padding: 0px 20px;
   outline: none;
-  border-radius: var(--border-radius);
+  border-radius: #ddd;
   border-width: 1px;
   border-style: solid;
-  border-color: var(--border-color);
+  border-color: #ddd;
   -o-border-image: initial;
   border-image: initial;
   margin-bottom: 10px;
@@ -1679,11 +1671,11 @@ ul.breadcrumbs-custom-path li a {
 
 .travel-contact .contact-grids input:focus,
 .travel-contact .contact-grids textarea:focus {
-  border: 1px solid var(--secondary-color);
+  border: 1px solid #365e11;
 }
 
 .travel-contact .map h5 {
-  color: var(--heading-color);
+  color: #365e11;
   font-size: 35px;
   line-height: 42px;
   font-weight: 600;
@@ -1694,8 +1686,8 @@ ul.breadcrumbs-custom-path li a {
   width: 100%;
   min-height: 330px;
   padding: 10px;
-  background: var(--bg-color);
-  border-radius: var(--border-radius);
+  background: #fff;
+  border-radius: 8px;
 }
 
 @media (max-width: 568px) {
@@ -1728,7 +1720,7 @@ ul.breadcrumbs-custom-path li a {
   
   .travel-contact .contact-grids input:focus,
   .travel-contact .contact-grids textarea:focus {
-    border: 1px solid var(--secondary-color);
+    border: 1px solid #365e11;
   }
   
   .travel-contact .map h5 {
@@ -1761,4 +1753,9 @@ ul.breadcrumbs-custom-path li a {
 }
   
   
+}
+.btn-primary {
+    color: #fff;
+    background-color: #000000;
+    border-color: #000;
 }
