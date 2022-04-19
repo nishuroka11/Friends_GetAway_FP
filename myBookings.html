@@ -20,6 +20,7 @@
 
   <!-- js -->
   <script src="js/index.js" defer></script>
+  <script src="js/myBookings.js" defer></script>
 
   <title>Get Away</title>
 </head>
@@ -49,16 +50,16 @@
             <li class="nav-item">
               <a class="nav-link" href="about.html">About</a>
             </li>
-            <li class="nav-item active">
+            <li class="nav-item ">
               <a class="nav-link" href="hotel-booking.html">Hotel Booking</a>
             </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="myBookings.html">My Bookings</a>
+              </li>
             <li class="nav-item">
-              <a class="nav-link" href="myBookings.html">My Bookings</a>
+              <a class="nav-link" href="packages.html">Packages</a>
             </li>
-          <li class="nav-item">
-            <a class="nav-link" href="packages.html">Packages</a>
-          </li>
-
+            
             <li class="nav-item">
               <a class="nav-link" href="contact.html">Contact</a>
             </li>
@@ -83,53 +84,30 @@
     </div>
   </header>
 
-  <section class="form">
-    <form action="">
-
-      <div class="form-group">
-        <h2 class="heading">Booking & contact</h2>
-        <div class="controls">
-          <input type="text" id="name" name="name">
-          <label for="name">Name</label>
-        </div>
-        <div class="controls">
-          <input type="text" id="email" name="email">
-          <label for="email">Email</label>
-        </div>
-        <div class="controls">
-          <input type="text" id="hotel-name" name="hotel-name">
-          <label for="name">Hotel Name</label>
-        </div>
-        <div class="controls">
-          <input type="text" id="city-name" name="city-name">
-          <label for="city-name">City Name</label>
-        </div>
-        <div class="grid">
-          <div id="column1" class="column">
-            <div class="controls">
-              <input type="date" id="arrive" name="arrive">
-              <label for="arrive" class="label-date"><i class="fa fa-calendar"></i>&nbsp;&nbsp;Arrive</label>
-            </div>
+  <section class="main-body my-about">
+    <section class="travel-about-breadcrumb text-left">
+        <div class="breadcrumb-bg breadcrumb-bg-about py-sm-5 py-4">
+          <div class="container py-2">
+            <h2 class="title">Packages</h2>
+            <ul class="breadcrumbs-custom-path mt-2">
+              <li><a href="#url">Home</a></li>
+              <li class="active"><i class="icofont-arrow-right"></i> Packages </li>
+            </ul>
           </div>
-
-
-          <div class="column">
-            <div class="controls">
-              <input type="date" id="depart" name="depart" />
-              <label for="depart" class="label-date"><i class="fa fa-calendar"></i>&nbsp;&nbsp;Depart</label>
-            </div>
-          </div>
-
-
         </div>
-        <button type="submit" value="Submit" class="col-1-4">Book Now</button>
-      </div>
+      </section>
+   </section>
 
+   <main>
 
-    </form>
-  </section>
-
-
+    <section class="note-display">
+      <h2>Hotel Bookings</h2>
+      <ul id="hotellist">
+          
+      </ul>
+    </section>
+   
+</main>
 
   <footer class="travel-footer">
     <div class="travel-footer-16-main py-5">

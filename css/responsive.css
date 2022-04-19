@@ -253,6 +253,24 @@
   .col-lg-3 {
     max-width: 20%;
   }
+  .btn-style {
+    padding: 0px 11px;
+    font-size: 13px;
+    line-height: 42px;
+    height: 42px;
+  }
+
+  .travel-grids1 .col-md-4 {
+    max-width: 28.33333%;
+  }
+
+  .travel-footer .col-md-4 {
+    max-width: 21.33333%;
+  }
+
+  .col-lg-6 {
+    max-width: 46%;
+  }
 
   .best-rooms .col-6 {
     max-width: 42%;
@@ -267,6 +285,14 @@
 }
   .travel-footer .col-md-4 {
     max-width: 24.33333%;
+  }
+  .travel-footer .travel-footer-16-main h3 {
+    font-size: 13px;
+  }
+
+  .col-sm-5 {
+    flex: 0 0 41.66667%;
+    max-width: 32.66667%;
   }
 }
 
