@@ -1,7 +1,11 @@
 /* offset */
 * {
   padding: 0;
+<<<<<<< HEAD
+  /* overflow-x: hidden; */
+=======
   margin: auto;
+>>>>>>> 0810b525b1c39e6769a7dad296a295b7cf049ab5
 }
 .container {
   width: 1178px;
@@ -88,10 +92,10 @@ nav .active a {
 .mb-3 {
   margin-bottom: 3em;
 }
-.mt-5,
+/* .mt-5,
 .my-5 {
   margin-top: 3rem !important;
-}
+} */
 .col-1,
 .col-2,
 .col-3,
@@ -163,7 +167,7 @@ nav .active a {
 .col-xl,
 .col-xl-auto {
   position: relative;
-  width: 100%;
+  /* width: 100%; */
   padding-right: 15px;
   padding-left: 15px;
 }
@@ -176,7 +180,7 @@ nav .active a {
 }
 .mt-4,
 .my-4 {
-  margin-top: 1.5rem !important;
+  margin-top: 1rem !important;
 }
 .pb-5,
 .py-5 {
@@ -893,7 +897,7 @@ section {
 }
 
 .travel-bottom .bottom-info {
-  max-width: 600px;
+  max-width: 60%;
 }
 
 .travel-bottom .bottom-info p {
@@ -1007,6 +1011,9 @@ section {
   display: flex;
   margin-bottom: 15px;
   justify-content: space-between;
+}
+.travel-footer .below-section {
+  margin-top: 20px;
 }
 
 .travel-footer .subscribe input[type="email"] {
