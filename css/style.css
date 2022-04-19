@@ -1435,7 +1435,7 @@ section {
     text-transform: capitalize;
   }
   
-  .pricing .pricing-style-w3ls {
+  .pricing .pricing-style-travels {
     margin: 0 auto;
     width: 100%;
     display: flex;
@@ -1475,3 +1475,97 @@ section {
       text-align: center;
     }
   }
+
+  /* Contact Page */
+  .travel-contact .cont-details h5 {
+    color: var(--heading-color);
+    font-size: 40px;
+    line-height: 48px;
+    font-weight: 600;
+  }
+  
+  .travel-contact .cont-details p {
+    color: var(--font-color);
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 400;
+    max-width: 450px;
+  }
+  
+  .travel-contact .hours h6 {
+    color: var(--heading-color);
+    font-size: 18px;
+    line-height: 25px;
+  }
+  
+  .travel-contact .hours p {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: var(--font-color);
+    max-width: 350px;
+  }
+  
+  .travel-contact .hours p a {
+    color: var(--font-color);
+  }
+  
+  .travel-contact .hours p a:hover {
+    text-decoration: underline;
+  }
+  
+  .travel-contact .contact-grids input,
+  .travel-contact .contact-grids textarea {
+    font-weight: normal;
+    font-style: normal;
+    font-family: inherit;
+    border: none;
+    color: var(--heading-color);
+    font-size: 16px;
+    width: 100%;
+    height: 55px;
+    background: var(--bg-color);
+    padding: 0px 20px;
+    outline: none;
+    border-radius: var(--border-radius);
+    border-width: 1px;
+    border-style: solid;
+    border-color: var(--border-color);
+    -o-border-image: initial;
+    border-image: initial;
+    margin-bottom: 10px;
+  }
+  
+  .travel-contact .contact-grids textarea {
+    height: 140px;
+    padding: 15px 20px;
+  }
+  
+  .travel-contact .contact-grids input:focus,
+  .travel-contact .contact-grids textarea:focus {
+    border: 1px solid var(--secondary-color);
+  }
+  
+  .travel-contact .map h5 {
+    color: var(--heading-color);
+    font-size: 35px;
+    line-height: 42px;
+    font-weight: 600;
+    margin-bottom: 15px;
+  }
+  
+  .travel-contact .map iframe {
+    width: 100%;
+    min-height: 330px;
+    padding: 10px;
+    background: var(--bg-color);
+    border-radius: var(--border-radius);
+  }
+  
+  @media (max-width: 568px) {
+  
+    .travel-contact .contact-grids input,
+    .travel-contact .contact-grids textarea {
+      font-size: 16px;
+    }
+  }
+  
