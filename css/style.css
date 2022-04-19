@@ -87,10 +87,10 @@ nav .active a {
 .mb-3 {
   margin-bottom: 3em;
 }
-.mt-5,
+/* .mt-5,
 .my-5 {
   margin-top: 3rem !important;
-}
+} */
 .col-1,
 .col-2,
 .col-3,
@@ -175,7 +175,7 @@ nav .active a {
 }
 .mt-4,
 .my-4 {
-  margin-top: 1.5rem !important;
+  margin-top: 1rem !important;
 }
 .pb-5,
 .py-5 {
@@ -890,7 +890,7 @@ section {
 }
 
 .travel-bottom .bottom-info {
-  max-width: 600px;
+  max-width: 60%;
 }
 
 .travel-bottom .bottom-info p {
