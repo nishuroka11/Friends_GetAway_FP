@@ -1005,6 +1005,9 @@ section {
   margin-bottom: 15px;
   justify-content: space-between;
 }
+.travel-footer .below-section {
+  margin-top: 20px;
+}
 
 .travel-footer .subscribe input[type="email"] {
   background: #936be80d;

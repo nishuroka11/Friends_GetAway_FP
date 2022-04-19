@@ -257,13 +257,17 @@
   .best-rooms .col-6 {
     max-width: 42%;
   }
+
   .btn-style {
     padding: 0px 30px;
     height: 45px;
+  }
+  .travel-grids1 .col-md-4 {
+    max-width: 29.33333%;
 }
-.travel-grids1 .col-md-4 {
-  max-width: 29.33333%;
-}
+  .travel-footer .col-md-4 {
+    max-width: 24.33333%;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -419,18 +423,23 @@
   .hny-title {
     font-size: 30px;
   }
+
   .travel-footer .col-md-4 {
     max-width: 100%;
     text-align: center;
-}
-.newsletter{
-  text-align: center;
-  margin-top: 10px;
-}
-.below-section{
-  margin-top: 10px;
-}
-.travel-footer .below-section, .travel-footer .para-content-footer {
-  padding-top: 10px;
-}
+  }
+
+  .newsletter {
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .below-section {
+    margin-top: 10px;
+  }
+
+  .travel-footer .below-section,
+  .travel-footer .para-content-footer {
+    padding-top: 10px;
+  }
 }
