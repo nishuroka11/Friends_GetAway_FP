@@ -1,4 +1,12 @@
 // Constants
+const nameInput = document.querySelector('#name');
+const emailInput = document.querySelector('#email');
+const hotelNameInput = document.querySelector('#hotel-name');
+const cityInput = document.querySelector('#city-name');
+const arriveInput = document.querySelector('#arrive');
+const departInput = document.querySelector('#depart');
+
+// Constants
 const userName = document.querySelector('#userName');
 const logoutBtn = document.querySelector('#logout');
 
@@ -189,3 +197,37 @@ cancelChangePassBtn.onclick = function () {
   modal.style.display = "none";
 }
 
+
+var bookingBtn = document.getElementById("submitBooking");
+
+bookingBtn.onclick = function () {
+  let user = localStorage.getItem('user')
+  user = JSON.parse(user);
+
+  let newBooking = {
+    name: nameInput.value,
+    email: emailInput.value,
+    hotelName: hotelNameInput.value,
+    city: cityInput.value,
+    arrive: arriveInput.value,
+    depart: departInput.value,
+    userId: user.userId
+  };
+
+  let transaction = db.transaction(['packageBooking'], 'readwrite');
+
+  let objectStore = transaction.objectStore('packageBooking');
+  var request = objectStore.add(newBooking);
+
+  request.onsuccess = function () {
+    alert("Package booked successfully");
+
+    window.location.href = "packages.html";
+
+  };
+}
+
+
+  // function bookPackage(e) {
+  //   console.log("herllo")
+  // }

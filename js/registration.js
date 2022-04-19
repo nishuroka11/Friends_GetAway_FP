@@ -42,12 +42,14 @@ window.onload = function () {
     objectStore.createIndex('name', 'name', { unique: false });
     objectStore.createIndex('email', 'email', { unique: false });
 
-    let objectStore3 = db.createObjectStore('flightBooking', { keyPath: 'id', autoIncrement: true });
+    let objectStore3 = db.createObjectStore('packageBooking', { keyPath: 'id', autoIncrement: true });
     objectStore3.createIndex('userId', 'userId', { unique: false });
-    objectStore3.createIndex('flightFrom', 'flightFrom', { unique: false });
-    objectStore3.createIndex('flightTo', 'flightTo', { unique: false });
-    objectStore3.createIndex('flightDate', 'flightDate', { unique: false });
-    objectStore3.createIndex('flightPassengers', 'flightPassengers', { unique: false });
+    objectStore3.createIndex('name', 'name', { unique: false });
+    objectStore3.createIndex('email', 'email', { unique: false });
+    objectStore3.createIndex('hotelName', 'hotelName', { unique: false });
+    objectStore3.createIndex('city', 'city', { unique: false });
+    objectStore3.createIndex('arrive', 'arrive', { unique: false });
+    objectStore3.createIndex('depart', 'depart', { unique: false });
     //
     let objectStore4 = db.createObjectStore('hotelBooking', { keyPath: 'id', autoIncrement: true });
     objectStore4.createIndex('userId', 'userId', { unique: false });
