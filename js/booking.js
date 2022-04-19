@@ -204,28 +204,54 @@ bookingBtn.onclick = function () {
   let user = localStorage.getItem('user')
   user = JSON.parse(user);
 
+  let name = nameInput.value;
+  let email = emailInput.value;
+  let hotelName = hotelNameInput.value;
+  let city = cityInput.value;
+  let arrive = arriveInput.value;
+  let depart = departInput.value;
+
   let newBooking = {
-    name: nameInput.value,
-    email: emailInput.value,
-    hotelName: hotelNameInput.value,
-    city: cityInput.value,
-    arrive: arriveInput.value,
-    depart: departInput.value,
+    name: name,
+    email: email,
+    hotelName: hotelName,
+    city: city,
+    arrive: arrive,
+    depart: depart,
     userId: user.userId
   };
 
-  let transaction = db.transaction(['packageBooking'], 'readwrite');
+  if (name && email && hotelName && city && arrive && depart) {
 
-  let objectStore = transaction.objectStore('packageBooking');
-  var request = objectStore.add(newBooking);
+    if (validateEmail(email)) {
 
-  request.onsuccess = function () {
-    alert("Package booked successfully");
+      let transaction = db.transaction(['packageBooking'], 'readwrite');
 
-    window.location.href = "packages.html";
+      let objectStore = transaction.objectStore('packageBooking');
+      var request = objectStore.add(newBooking);
 
-  };
+      request.onsuccess = function () {
+        alert("Package booked successfully");
+
+        window.location.href = "packages.html";
+
+      };
+    } else {
+      alert("Invalid Email");
+    }
+  } else {
+    alert("Please field all the fields")
+  }
+
 }
+
+function validateEmail(email) {
+  return String(email)
+    .toLowerCase()
+    .match(
+      /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+    );
+};
 
 
   // function bookPackage(e) {
