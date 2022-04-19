@@ -140,3 +140,11 @@ button{
     display: table;
     clear: both;
   }
+
+  @media (max-width: 760px) {
+    .column {
+      width: 100%;
+      padding-right: 0;
+    }
+   
+  }
