@@ -1,19 +1,14 @@
 /* offset */
 * {
-  margin: 0;
   padding: 0;
-  overflow-x: hidden;
+  margin: auto;
 }
-/* .container {
+.container {
   width: 1178px;
   padding-right: 15px;
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
-} */
-.container{
-  width: 80%;
-  margin: auto;
 }
 ul li {
   list-style: none;
@@ -39,6 +34,7 @@ a {
   color: #000;
   font-weight: 600;
   cursor: pointer;
+  color: red;
 }
 a:hover {
   color: #f53f1a;
@@ -982,7 +978,7 @@ section {
 }
 
 .travel-footer a.footer-small-text {
-  color: var(--heading-color);
+  color: #365e11;
   line-height: 24px;
   font-size: 16px;
   font-weight: 600;
@@ -1401,7 +1397,7 @@ section {
   }
   
   .pricing .pricing {
-    color: var(--heading-color);
+    color: #365e11;
     line-height: 32px;
     font-size: 42px;
     text-align: right;
@@ -1424,7 +1420,7 @@ section {
   }
   
   .pricing .pri1 {
-    color: var(--heading-color);
+    color: #365e11;
     text-align: right;
     line-height: 25px;
     font-size: 20px;
@@ -1483,7 +1479,7 @@ section {
 
   /* Contact Page */
   .travel-contact .cont-details h5 {
-    color: var(--heading-color);
+    color: #365e11;
     font-size: 40px;
     line-height: 48px;
     font-weight: 600;
@@ -1498,7 +1494,7 @@ section {
   }
   
   .travel-contact .hours h6 {
-    color: var(--heading-color);
+    color: #365e11;
     font-size: 18px;
     line-height: 25px;
   }
@@ -1524,17 +1520,17 @@ section {
     font-style: normal;
     font-family: inherit;
     border: none;
-    color: var(--heading-color);
+    color: #365e11;
     font-size: 16px;
-    width: 100%;
+    width: 92%;
     height: 55px;
-    background: var(--bg-color);
+    background: #fff;
     padding: 0px 20px;
     outline: none;
-    border-radius: var(--border-radius);
+    border-radius: 8px;
     border-width: 1px;
     border-style: solid;
-    border-color: var(--border-color);
+    border-color: #ddd;
     -o-border-image: initial;
     border-image: initial;
     margin-bottom: 10px;
@@ -1551,7 +1547,7 @@ section {
   }
   
   .travel-contact .map h5 {
-    color: var(--heading-color);
+    color: #365e11;
     font-size: 35px;
     line-height: 42px;
     font-weight: 600;
@@ -1562,8 +1558,8 @@ section {
     width: 100%;
     min-height: 330px;
     padding: 10px;
-    background: var(--bg-color);
-    border-radius: var(--border-radius);
+    background: #fff;
+    border-radius: 8px;
   }
   
   @media (max-width: 568px) {
@@ -1573,4 +1569,9 @@ section {
       font-size: 16px;
     }
   }
+  .btn-primary {
+    color: #fff;
+    background-color: #000000;
+    border-color: #000000;
+}
   
