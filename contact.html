@@ -125,7 +125,7 @@
             </div>
           </div>
           <div class="col-lg-6 mt-lg-0 mt-5 contact-right">
-            <form action="https://sendmail.travelayouts.com/submitForm" method="post" class="signin-form">
+            <form onsubmit="submitContact()" method="post" class="signin-form">
               <div class="input-grids">
                 <div class="form-group">
                   <input type="text" name="travelName" id="travelName" placeholder="Your Name*" class="contact-input">
@@ -233,41 +233,6 @@
       </div>
     </div>
   </footer>
-<<<<<<< HEAD
-
-  <!-- for banner  -->
-  <script>
-
-    let slideIndex = 1;
-    showSlides(slideIndex);
-
-    function plusSlides(n) {
-      showSlides((slideIndex += n));
-    }
-
-    function currentSlide(n) {
-      showSlides((slideIndex = n));
-    }
-
-    function showSlides(n) {
-      let i;
-      let slides = document.getElementsByClassName("mySlides");
-      if (n > slides.length) {
-        slideIndex = 1;
-      }
-      if (n < 1) {
-        slideIndex = slides.length;
-      }
-      for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-      }
-
-      slides[slideIndex - 1].style.display = "block";
-    }
-  </script>
-</body>
-
-=======
 
 
   <!-- The Modal -->
@@ -279,7 +244,7 @@
         <h2>Change Password</h2>
       </div>
       <div class="modal-body">
-        <form id="changePwForm">
+        <form id="changePwForm" onsubmit="submitContact()">
           <div class="form container">
             <label for="password"><b>Old Password</b></label>
             <input type="password" placeholder="Enter Old Password" name="password" id="password" required>
@@ -295,12 +260,19 @@
       </div>
       <div class="modal-footer">
         <button id="changePassBtn">Change Password</button>
-        <button class="cancelbtn" id="cancelChangePassBtn">cancel</button>
+        <button class="cancelbtn" id="cancelChangePassBtn" >cancel</button>
       </div>
     </div>
   </div>
 
+  <script>
+    function submitContact() {
+        if(!confirm("Are you sure you want to submit the detail?")) {
+    return false;
+  }
+    }
+  </script>
+
 </body>
 
->>>>>>> 0810b525b1c39e6769a7dad296a295b7cf049ab5
 </html>
