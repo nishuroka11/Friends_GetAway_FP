@@ -19,6 +19,7 @@ a{
   text-align: left;
   width: 100%;
 }
+
 form{
 	padding: 4em 10%;
 }
@@ -106,7 +107,8 @@ button{
   border: none;
   color: #fff;
   padding: 12px 0;
-  float: right;
+  /* float: right; */
+  width: 20%;
 }
   button:hover{
     background-color: White;
@@ -143,6 +145,14 @@ button{
     content: "";
     display: table;
     clear: both;
+  }
+
+  /* My Bookings Page */
+  .note-display{
+	padding: 20px;
+    text-align: left;
+    width: 80%;
+    margin: auto;
   }
 
   @media (max-width: 760px) {
