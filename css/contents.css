@@ -1,6 +1,8 @@
 
 *{
 	box-sizing: border-box;
+    margin: 0;
+  padding: 0;
 }
 body{
 	text-align: center;
@@ -10,12 +12,14 @@ body{
 a{
   text-decoration: none;
 }
-
+.form{
+    margin: 50px;
+}
 .info-text{
   text-align: left;
   width: 100%;
 }
-header, form{
+form{
 	padding: 4em 10%;
 }
 
