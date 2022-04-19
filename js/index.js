@@ -49,10 +49,12 @@ window.onload = function () {
     //
     let objectStore4 = db.createObjectStore('hotelBooking', { keyPath: 'id', autoIncrement: true });
     objectStore4.createIndex('userId', 'userId', { unique: false });
-    objectStore4.createIndex('hotelFrom', 'hotelFrom', { unique: false });
-    objectStore4.createIndex('hotelTo', 'hotelTo', { unique: false });
+    objectStore4.createIndex('name', 'name', { unique: false });
+    objectStore4.createIndex('email', 'email', { unique: false });
     objectStore4.createIndex('hotelName', 'hotelName', { unique: false });
-    objectStore4.createIndex('cityName', 'cityName', { unique: false });
+    objectStore4.createIndex('city', 'city', { unique: false });
+    objectStore4.createIndex('arrive', 'arrive', { unique: false });
+    objectStore4.createIndex('depart', 'depart', { unique: false });
     //
     console.log('Database setup complete');
     //  alert("setup done");

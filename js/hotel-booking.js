@@ -1,7 +1,7 @@
 // Constants
 const nameInput = document.querySelector('#name');
 const emailInput = document.querySelector('#email');
-const packageNameInput = document.querySelector('#package-name');
+const hotelNameInput = document.querySelector('#hotel-name');
 const cityInput = document.querySelector('#city-name');
 const arriveInput = document.querySelector('#arrive');
 const departInput = document.querySelector('#depart');
@@ -50,7 +50,7 @@ window.onload = function () {
     objectStore3.createIndex('userId', 'userId', { unique: false });
     objectStore3.createIndex('name', 'name', { unique: false });
     objectStore3.createIndex('email', 'email', { unique: false });
-    objectStore3.createIndex('packageName', 'packageName', { unique: false });
+    objectStore3.createIndex('hotelName', 'hotelName', { unique: false });
     objectStore3.createIndex('city', 'city', { unique: false });
     objectStore3.createIndex('arrive', 'arrive', { unique: false });
     objectStore3.createIndex('depart', 'depart', { unique: false });
@@ -208,7 +208,7 @@ bookingBtn.onclick = function () {
 
   let name = nameInput.value;
   let email = emailInput.value;
-  let pacckageName = packageNameInput.value;
+  let hotelName = hotelNameInput.value;
   let city = cityInput.value;
   let arrive = arriveInput.value;
   let depart = departInput.value;
@@ -216,26 +216,26 @@ bookingBtn.onclick = function () {
   let newBooking = {
     name: name,
     email: email,
-    pacckageName: pacckageName,
+    hotelName: hotelName,
     city: city,
     arrive: arrive,
     depart: depart,
     userId: user.userId
   };
 
-  if (name && email && pacckageName && city && arrive && depart) {
+  if (name && email && hotelName && city && arrive && depart) {
 
     if (validateEmail(email)) {
 
-      let transaction = db.transaction(['packageBooking'], 'readwrite');
+      let transaction = db.transaction(['hotelBooking'], 'readwrite');
 
-      let objectStore = transaction.objectStore('packageBooking');
+      let objectStore = transaction.objectStore('hotelBooking');
       var request = objectStore.add(newBooking);
 
       request.onsuccess = function () {
-        alert("Package booked successfully");
+        alert("Hotel booked successfully");
 
-        window.location.href = "packages.html";
+        window.location.href = "index.html";
 
       };
     } else {

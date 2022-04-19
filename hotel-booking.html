@@ -15,11 +15,11 @@
   <!-- costum fonts -->
   <link href="css/icofont.min.css" rel="stylesheet" />
   <link href="css/style.css" rel="stylesheet" />
-  <link href="css/responsive.css" rel="stylesheet" />
   <link href="css/contents.css" rel="stylesheet" />
+  <link href="css/responsive.css" rel="stylesheet" />
 
   <!-- js -->
-  <script src="js/index.js" defer></script>
+  <script src="js/hotel-booking.js" defer></script>
 
   <title>Get Away</title>
 </head>
@@ -35,40 +35,37 @@
 
         <button class="navbar-toggler collapsed bg-gradient" type="button" data-toggle="collapse"
           data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
-          aria-label="Toggle navigation">
-          <!-- <span class="navbar-toggler-icon fa icon-expand fa-bars"></span>
-          <span class="navbar-toggler-icon fa icon-close fa-times"></span> -->
+          aria-label="Toggle navigation" onclick="toggleNav()">
           <i class="icofont-navigation-menu"></i>
         </button>
 
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="about.html">About</a>
-            </li>
-            <li class="nav-item active">
-              <a class="nav-link" href="hotel-booking.html">Hotel Booking</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="myBookings.html">My Bookings</a>
-            </li>
-          <li class="nav-item">
-            <a class="nav-link" href="packages.html">Packages</a>
-          </li>
+        <div class="nav-wrapper" id="topNav">
+          <div class="nav-bar">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="destination.html">Destinations</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="packages.html">Packages</a>
+              </li>
 
-            <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contact</a>
-            </li>
-          </ul>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact</a>
+              </li>
+            </ul>
+          </div>
         </div>
+
         <div class="d-lg-block d-none" id="login-block">
           <a href="login.html" class="btn btn-style btn-secondary">Login</a>
           <a href="registration.html" class="btn btn-style btn-secondary">Register</a>
         </div>
-<<<<<<< HEAD
         <div class="d-lg-block d-none" id="loggedIn-block">
           <div class="dropdown">
             <span class="d-flex"><i class="icofont-ui-user" style="padding-right: 10px"></i>
@@ -77,66 +74,6 @@
             <div class="dropdown-content">
               <a id="openModal">Change Password</a>
               <a id="logout">Logout</a>
-=======
-    </header>
-
-    <section class="main-body my-about">
-      <section class="travel-about-breadcrumb text-left">
-          <div class="breadcrumb-bg breadcrumb-bg-about py-sm-5 py-4">
-            <div class="container py-2">
-              <h2 class="title">Hotel Booking</h2>
-              <ul class="breadcrumbs-custom-path mt-2">
-                <li><a href="#url">Home</a></li>
-                <li class="active"><i class="icofont-arrow-right"></i> Hotel Booking </li>
-              </ul>
-            </div>
-          </div>
-        </section>
-     </section>
-    
-    <section class="form">
-        <form action="">
-
-            <div class="form-group">
-                <h2 class="heading">Book Your Hotel</h2>
-                <div class="controls">
-                    <input type="text" id="name" name="name" placeholder="Name">
-                    <!-- <label for="name">Name</label> -->
-                </div>
-                <div class="controls">
-                    <input type="text" id="email" name="email" placeholder="Email">
-                    <!-- <label for="email">Email</label> -->
-                </div>
-                <div class="controls">
-                    <input type="text" id="hotel-name" name="hotel-name" placeholder="Hotel Name">
-                    <!-- <label for="name">Hotel Name</label> -->
-                </div>
-                <div class="controls">
-                    <input type="text" id="city-name" name="city-name" placeholder="City Name">
-                    <!-- <label for="city-name">City Name</label> -->
-                </div>
-                <div class="grid">
-                    <div id="column1" class="column">
-                        <div class="controls">
-                            <input type="date" id="arrive" name="arrive" placeholder="Arrival Date">
-                            <!-- <label for="arrive" class="label-date"><i class="fa fa-calendar"></i>&nbsp;&nbsp;Arrive</label> -->
-                        </div>
-                    </div>
-    
-    
-                    <div class="column">
-                        <div class="controls">
-                            <input type="date" id="depart" name="depart" placeholder="Departure Date"/>
-                            <!-- <label for="depart" class="label-date"><i class="fa fa-calendar"></i>&nbsp;&nbsp;Depart</label> -->
-                        </div>
-                    </div>
-    
-    
-                </div>
-                <div class="controls">
-                  <button type="submit" class="btn btn-style btn-secondary">Submit</button>
-              </div>
->>>>>>> 0810b525b1c39e6769a7dad296a295b7cf049ab5
             </div>
           </div>
         </div>
@@ -144,50 +81,69 @@
     </div>
   </header>
 
+  <section class="main-body my-about">
+    <section class="travel-about-breadcrumb text-left">
+      <div class="breadcrumb-bg breadcrumb-bg-about py-sm-5 py-4">
+        <div class="container py-2">
+          <h2 class="title">Hotel Booking</h2>
+          <ul class="breadcrumbs-custom-path mt-2">
+            <li><a href="#url">Home</a></li>
+            <li class="active"><i class="icofont-arrow-right"></i> Hotel Booking </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </section>
+
   <section class="form">
-    <form action="">
+    <form id="bookingForm">
 
       <div class="form-group">
-        <h2 class="heading">Booking & contact</h2>
+        <h2 class="heading">Book Your Hotel</h2>
         <div class="controls">
-          <input type="text" id="name" name="name">
-          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Name">
+          <!-- <label for="name">Name</label> -->
         </div>
         <div class="controls">
-          <input type="text" id="email" name="email">
-          <label for="email">Email</label>
+          <input type="text" id="email" name="email" placeholder="Email">
+          <!-- <label for="email">Email</label> -->
         </div>
         <div class="controls">
-          <input type="text" id="hotel-name" name="hotel-name">
-          <label for="name">Hotel Name</label>
+          <input type="text" id="hotel-name" name="hotel-name" placeholder="Hotel Name">
+          <!-- <label for="name">Hotel Name</label> -->
         </div>
         <div class="controls">
-          <input type="text" id="city-name" name="city-name">
-          <label for="city-name">City Name</label>
+          <input type="text" id="city-name" name="city-name" placeholder="City Name">
+          <!-- <label for="city-name">City Name</label> -->
         </div>
         <div class="grid">
           <div id="column1" class="column">
             <div class="controls">
-              <input type="date" id="arrive" name="arrive">
-              <label for="arrive" class="label-date"><i class="fa fa-calendar"></i>&nbsp;&nbsp;Arrive</label>
+              <input type="date" id="arrive" name="arrive" placeholder="Arrival Date">
+              <!-- <label for="arrive" class="label-date"><i class="fa fa-calendar"></i>&nbsp;&nbsp;Arrive</label> -->
             </div>
           </div>
 
 
           <div class="column">
             <div class="controls">
-              <input type="date" id="depart" name="depart" />
-              <label for="depart" class="label-date"><i class="fa fa-calendar"></i>&nbsp;&nbsp;Depart</label>
+              <input type="date" id="depart" name="depart" placeholder="Departure Date" />
+              <!-- <label for="depart" class="label-date"><i class="fa fa-calendar"></i>&nbsp;&nbsp;Depart</label> -->
             </div>
           </div>
 
 
         </div>
-        <button type="submit" value="Submit" class="col-1-4">Book Now</button>
+
       </div>
 
-
+      <div class="controls">
+        <button type="button" id="submitBooking" class="btn btn-style btn-secondary">Submit</button>
+        <!-- <button>Hello</button> -->
+      </div>
+      <!-- <button>Hi</button> -->
     </form>
+    <!-- <button id="submitBooking" class="btn btn-style btn-secondary">Book</button> -->
   </section>
 
 
