@@ -1,277 +1,313 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- google fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Special+Elite&display=swap"
-      rel="stylesheet"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- costum fonts -->
-    <link href="css/icofont.min.css" rel="stylesheet" />
-    <link href="css/style.css" rel="stylesheet" />
-    <link href="css/responsive.css" rel="stylesheet" />
+  <!-- google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Special+Elite&display=swap"
+    rel="stylesheet" />
 
-    <title>Get Away</title>
-  </head>
-  <body>
-    <header id="site-header" class="fixed-top">
-      <div class="container">
-        <nav class="navbar navbar-expand-lg stroke">
-          <h1>
-            <a class="navbar-brand mr-lg-5" href="index.html"> Get Away </a>
-          </h1>
+  <!-- costum fonts -->
+  <link href="css/icofont.min.css" rel="stylesheet" />
+  <link href="css/style.css" rel="stylesheet" />
+  <link href="css/responsive.css" rel="stylesheet" />
 
-          <button
-            class="navbar-toggler collapsed bg-gradient"
-            type="button"
-            data-toggle="collapse"
-            data-target="#navbarTogglerDemo02"
-            aria-controls="navbarTogglerDemo02"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon fa icon-expand fa-bars"></span>
-            <span class="navbar-toggler-icon fa icon-close fa-times"></span>
-          </button>
+  <!-- js -->
+  <script src="js/index.js" defer></script>
 
-          <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-            <ul class="navbar-nav mr-auto">
-              <li class="nav-item">
-                <a class="nav-link" href="index.html"
-                  >Home <span class="sr-only">(current)</span></a
-                >
-              </li>
-              <li class="nav-item active">
-                <a class="nav-link" href="about.html">About</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="services.html">Destinations</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="pricing.html">Packages</a>
-              </li>
+  <title>Get Away</title>
+</head>
 
-              <li class="nav-item">
-                <a class="nav-link" href="contact.html">Contact</a>
-              </li>
-            </ul>
+<body>
+  <header id="site-header" class="fixed-top">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg stroke">
+        <h1>
+          <a class="navbar-brand mr-lg-5" href="index.html"> Get Away </a>
+          <!-- <a href="javascript:void(0);" class="icon" onclick="toggleNav()"><i class="icofont-navigation-menu"></i></a> -->
+        </h1>
+
+        <button class="navbar-toggler collapsed bg-gradient" type="button" data-toggle="collapse"
+          data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <!-- <span class="navbar-toggler-icon fa icon-expand fa-bars"></span>
+                  <span class="navbar-toggler-icon fa icon-close fa-times"></span> -->
+          <i class="icofont-navigation-menu"></i>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="destination.html">Destinations</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="packages.html">Packages</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+        <div class="d-lg-block d-none" id="login-block">
+          <a href="login.html" class="btn btn-style btn-secondary">Login</a>
+          <a href="registration.html" class="btn btn-style btn-secondary">Register</a>
+        </div>
+        <div class="d-lg-block d-none" id="loggedIn-block">
+          <div class="dropdown">
+            <span class="d-flex"><i class="icofont-ui-user" style="padding-right: 10px"></i>
+              <p>Hi <span id="userName"></span></p>
+            </span>
+            <div class="dropdown-content">
+              <a id="openModal">Change Password</a>
+              <a id="logout">Logout</a>
+            </div>
           </div>
-          <div class="d-lg-block d-none">
-            <a href="contact.html" class="btn btn-style btn-secondary"
-              >Login</a
-            >
-            <a href="contact.html" class="btn btn-style btn-secondary"
-              >Register</a
-            >
-          </div>
-        </nav>
-      </div>
-    </header>
+        </div>
+      </nav>
+    </div>
+  </header>
 
-   <section class="main-body my-about">
+  <section class="main-body my-about">
     <section class="travel-about-breadcrumb text-left">
-        <div class="breadcrumb-bg breadcrumb-bg-about py-sm-5 py-4">
-          <div class="container py-2">
-            <h2 class="title">About Us</h2>
-            <ul class="breadcrumbs-custom-path mt-2">
-              <li><a href="#url">Home</a></li>
-              <li class="active"><i class="icofont-arrow-right"></i> Destinations </li>
-            </ul>
-          </div>
+      <div class="breadcrumb-bg breadcrumb-bg-about py-sm-5 py-4">
+        <div class="container py-2">
+          <h2 class="title">About Us</h2>
+          <ul class="breadcrumbs-custom-path mt-2">
+            <li><a href="#url">Home</a></li>
+            <li class="active"><i class="icofont-arrow-right"></i> Destinations </li>
+          </ul>
         </div>
-      </section>
-   </section>
-   
+      </div>
+    </section>
+  </section>
 
-    <section class="travel-grids1 grids-1">
-        <div class="hny-three-grids py-5">
-          <div class="container py-lg-5">
-            <div class="row">
-              <div class="col-md-4 col-sm-6 mt-0 grids5-info">
-                <a href="#url"><img src="images/g1.jpeg" class="img-fluid" alt=""></a>
-                <div class="info">
-                    <h4><a href="blog-single.html">Paris</a></h4>
-                    <p>3Days, 4 Nights </p>
-                    <div class="dst-btm">
-                      <h6 class="">Start From </h6>
-                      <span>$1750</span>
-                    </div>
-                </div>
-              </div>
-              <div class="col-md-4 col-sm-6 mt-0 grids5-info">
-                <a href="#url"><img src="images/g2.jpeg" class="img-fluid" alt=""></a>
-                <div class="info">
-                    <h4><a href="blog-single.html">Paris</a></h4>
-                    <p>3Days, 4 Nights </p>
-                    <div class="dst-btm">
-                      <h6 class="">Start From </h6>
-                      <span>$1750</span>
-                    </div>
-                </div>
-              </div>
-              <div class="col-md-4 col-sm-6 mt-0 grids5-info">
-                <a href="#url"><img src="images/g3.jpeg" class="img-fluid" alt=""></a>
-                <div class="info">
-                    <h4><a href="blog-single.html">Paris</a></h4>
-                    <p>3Days, 4 Nights </p>
-                    <div class="dst-btm">
-                      <h6 class="">Start From </h6>
-                      <span>$1750</span>
-                    </div>
-                </div>
-              </div>
-              <div class="col-md-4 col-sm-6 mt-0 grids5-info">
-                <a href="#url"><img src="images/g4.jpeg" class="img-fluid" alt=""></a>
-                <div class="info">
-                    <h4><a href="blog-single.html">Paris</a></h4>
-                    <p>3Days, 4 Nights </p>
-                    <div class="dst-btm">
-                      <h6 class="">Start From </h6>
-                      <span>$1750</span>
-                    </div>
-                </div>
-              </div>
-              <div class="col-md-4 col-sm-6 mt-0 grids5-info">
-                <a href="#url"><img src="images/g5.jpeg" class="img-fluid" alt=""></a>
-                <div class="info">
-                    <h4><a href="blog-single.html">Paris</a></h4>
-                    <p>3Days, 4 Nights </p>
-                    <div class="dst-btm">
-                      <h6 class="">Start From </h6>
-                      <span>$1750</span>
-                    </div>
-                </div>
-              </div>
-              <div class="col-md-4 col-sm-6 mt-0 grids5-info">
-                <a href="#url"><img src="images/g6.jpeg" class="img-fluid" alt=""></a>
-                <div class="info">
-                    <h4><a href="blog-single.html">Paris</a></h4>
-                    <p>3Days, 4 Nights </p>
-                    <div class="dst-btm">
-                      <h6 class="">Start From </h6>
-                      <span>$1750</span>
-                    </div>
-                </div>
-              </div>
-              <div class="col-md-4 col-sm-6 mt-0 grids5-info">
-                <a href="#url"><img src="images/g7.jpeg" class="img-fluid" alt=""></a>
-                <div class="info">
-                    <h4><a href="blog-single.html">Paris</a></h4>
-                    <p>3Days, 4 Nights </p>
-                    <div class="dst-btm">
-                      <h6 class="">Start From </h6>
-                      <span>$1750</span>
-                    </div>
-                </div>
-              </div>
-              <div class="col-md-4 col-sm-6 mt-0 grids5-info">
-                <a href="#url"><img src="images/g8.jpeg" class="img-fluid" alt=""></a>
-                <div class="info">
-                    <h4><a href="blog-single.html">Paris</a></h4>
-                    <p>3Days, 4 Nights </p>
-                    <div class="dst-btm">
-                      <h6 class="">Start From </h6>
-                      <span>$1750</span>
-                    </div>
-                </div>
-              </div>
-              <div class="col-md-4 col-sm-6 mt-0 grids5-info">
-                <a href="#url"><img src="images/g9.jpeg" class="img-fluid" alt=""></a>
-                <div class="info">
-                    <h4><a href="blog-single.html">Paris</a></h4>
-                    <p>3Days, 4 Nights </p>
-                    <div class="dst-btm">
-                      <h6 class="">Start From </h6>
-                      <span>$1750</span>
-                    </div>
-                </div>
-              </div>
-          </div>
-        </div>
-      </section>
 
-    <footer class="travel-footer">
-        <div class="travel-footer-16-main py-5">
-            <div class="container">
-              <div class="row">
-                <div class="col-lg-6 column">
-                  <div class="row">
-                    <div class="col-md-4 column">
-                      <h3>Company</h3>
-                      <ul class="footer-gd-16">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="contact.html">Contact Us</a></li>
-                      </ul>
-                    </div>
-                    <div class="col-md-4 column mt-md-0 mt-4">
-                      <h3>Useful Links</h3>
-                      <ul class="footer-gd-16">
-                        <li><a href="#url">Destinations</a></li>
-                        <li><a href="#url">Our Branches</a></li>
-                        <li><a href="#url">Latest Media</a></li>
-                        <li><a href="about.html">About Company</a></li>
-                        <li><a href="#url">Our Packages</a></li>
-                      </ul>
-                    </div>
-                    <div class="col-md-4 column mt-md-0 mt-4">
-                      <h3>Our Services</h3>
-                      <ul class="footer-gd-16">
-                        <li><a href="#url">Privacy Policy</a></li>
-                        <li><a href="#url">Our Terms</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="landing-single.html">Landing Page</a></li>
-                        <li><a href="#url">Our Guides</a></li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-6 col-md-12 column pl-lg-5 column4 mt-lg-0 mt-5">
-                  <h3>Newsletter </h3>
-                  <div class="end-column">
-                    <h4>Get latest updates and offers.</h4>
-                    <form action="#" class="subscribe" method="post">
-                      <input type="email" name="email" placeholder="Email Address" required="">
-                      <button type="submit">Go</button>
-                    </form>
-                    <p>Sign up for our latest news &amp; articles. We won’t give you spam mails.</p>
-                  </div>
-                </div>
-              </div>
-              <div class="d-flex below-section justify-content-between align-items-center pt-4 mt-5">
-                <div class="columns text-lg-left text-center">
-                  <p>© 2020 Get Away. All rights reserved.Design by <a href="#" target="_blank">
-                    F. R. I. E. N. D. S</a>
-                  </p>
-                </div>
-                <div class="columns-2 mt-lg-0 mt-3">
-                  <ul class="social">
-                    <li><a href="#facebook"><i class="icofont-facebook"></i></a>
-                    </li>
-                    <li><a href="#linkedin"><i class="icofont-linkedin"></i></span></a>
-                    </li>
-                    <li><a href="#twitter"><i class="icofont-twitter"></i></span></a>
-                    </li>
-                    <li><a href="#google"><i class="icofont-google-plus"></i></span></a>
-                    </li>
-                    <li><a href="#github"><i class="icofont-github"></i></span></a>
-                    </li>
-                  </ul>
-                </div>
+  <section class="travel-grids1 grids-1">
+    <div class="hny-three-grids py-5">
+      <div class="container py-lg-5">
+        <div class="row">
+          <div class="col-md-4 col-sm-6 mt-0 grids5-info">
+            <a href="#url"><img src="images/g1.jpeg" class="img-fluid" alt=""></a>
+            <div class="info">
+              <h4><a href="blog-single.html">Paris</a></h4>
+              <p>3Days, 4 Nights </p>
+              <div class="dst-btm">
+                <h6 class="">Start From </h6>
+                <span>$1750</span>
               </div>
             </div>
           </div>
-    </footer>
+          <div class="col-md-4 col-sm-6 mt-0 grids5-info">
+            <a href="#url"><img src="images/g2.jpeg" class="img-fluid" alt=""></a>
+            <div class="info">
+              <h4><a href="blog-single.html">Paris</a></h4>
+              <p>3Days, 4 Nights </p>
+              <div class="dst-btm">
+                <h6 class="">Start From </h6>
+                <span>$1750</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 mt-0 grids5-info">
+            <a href="#url"><img src="images/g3.jpeg" class="img-fluid" alt=""></a>
+            <div class="info">
+              <h4><a href="blog-single.html">Paris</a></h4>
+              <p>3Days, 4 Nights </p>
+              <div class="dst-btm">
+                <h6 class="">Start From </h6>
+                <span>$1750</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 mt-0 grids5-info">
+            <a href="#url"><img src="images/g4.jpeg" class="img-fluid" alt=""></a>
+            <div class="info">
+              <h4><a href="blog-single.html">Paris</a></h4>
+              <p>3Days, 4 Nights </p>
+              <div class="dst-btm">
+                <h6 class="">Start From </h6>
+                <span>$1750</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 mt-0 grids5-info">
+            <a href="#url"><img src="images/g5.jpeg" class="img-fluid" alt=""></a>
+            <div class="info">
+              <h4><a href="blog-single.html">Paris</a></h4>
+              <p>3Days, 4 Nights </p>
+              <div class="dst-btm">
+                <h6 class="">Start From </h6>
+                <span>$1750</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 mt-0 grids5-info">
+            <a href="#url"><img src="images/g6.jpeg" class="img-fluid" alt=""></a>
+            <div class="info">
+              <h4><a href="blog-single.html">Paris</a></h4>
+              <p>3Days, 4 Nights </p>
+              <div class="dst-btm">
+                <h6 class="">Start From </h6>
+                <span>$1750</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 mt-0 grids5-info">
+            <a href="#url"><img src="images/g7.jpeg" class="img-fluid" alt=""></a>
+            <div class="info">
+              <h4><a href="blog-single.html">Paris</a></h4>
+              <p>3Days, 4 Nights </p>
+              <div class="dst-btm">
+                <h6 class="">Start From </h6>
+                <span>$1750</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 mt-0 grids5-info">
+            <a href="#url"><img src="images/g8.jpeg" class="img-fluid" alt=""></a>
+            <div class="info">
+              <h4><a href="blog-single.html">Paris</a></h4>
+              <p>3Days, 4 Nights </p>
+              <div class="dst-btm">
+                <h6 class="">Start From </h6>
+                <span>$1750</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 mt-0 grids5-info">
+            <a href="#url"><img src="images/g9.jpeg" class="img-fluid" alt=""></a>
+            <div class="info">
+              <h4><a href="blog-single.html">Paris</a></h4>
+              <p>3Days, 4 Nights </p>
+              <div class="dst-btm">
+                <h6 class="">Start From </h6>
+                <span>$1750</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
 
-    
-  </body>
+  <footer class="travel-footer">
+    <div class="travel-footer-16-main py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 column">
+            <div class="row">
+              <div class="col-md-4 column">
+                <h3>Company</h3>
+                <ul class="footer-gd-16">
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="about.html">About Us</a></li>
+                  <li><a href="services.html">Services</a></li>
+                  <li><a href="blog.html">Blog</a></li>
+                  <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+              </div>
+              <div class="col-md-4 column mt-md-0 mt-4">
+                <h3>Useful Links</h3>
+                <ul class="footer-gd-16">
+                  <li><a href="#url">Destinations</a></li>
+                  <li><a href="#url">Our Branches</a></li>
+                  <li><a href="#url">Latest Media</a></li>
+                  <li><a href="about.html">About Company</a></li>
+                  <li><a href="#url">Our Packages</a></li>
+                </ul>
+              </div>
+              <div class="col-md-4 column mt-md-0 mt-4">
+                <h3>Our Services</h3>
+                <ul class="footer-gd-16">
+                  <li><a href="#url">Privacy Policy</a></li>
+                  <li><a href="#url">Our Terms</a></li>
+                  <li><a href="services.html">Services</a></li>
+                  <li><a href="landing-single.html">Landing Page</a></li>
+                  <li><a href="#url">Our Guides</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-12 column pl-lg-5 column4 mt-lg-0 mt-5">
+            <h3>Newsletter </h3>
+            <div class="end-column">
+              <h4>Get latest updates and offers.</h4>
+              <form action="#" class="subscribe" method="post">
+                <input type="email" name="email" placeholder="Email Address" required="">
+                <button type="submit">Go</button>
+              </form>
+              <p>Sign up for our latest news &amp; articles. We won’t give you spam mails.</p>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex below-section justify-content-between align-items-center pt-4 mt-5">
+          <div class="columns text-lg-left text-center">
+            <p>© 2020 Get Away. All rights reserved.Design by <a href="#" target="_blank">
+                F. R. I. E. N. D. S</a>
+            </p>
+          </div>
+          <div class="columns-2 mt-lg-0 mt-3">
+            <ul class="social">
+              <li><a href="#facebook"><i class="icofont-facebook"></i></a>
+              </li>
+              <li><a href="#linkedin"><i class="icofont-linkedin"></i></span></a>
+              </li>
+              <li><a href="#twitter"><i class="icofont-twitter"></i></span></a>
+              </li>
+              <li><a href="#google"><i class="icofont-google-plus"></i></span></a>
+              </li>
+              <li><a href="#github"><i class="icofont-github"></i></span></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- The Modal -->
+  <div id="myModal" class="modal">
+
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="close">&times;</span>
+        <h2>Change Password</h2>
+      </div>
+      <div class="modal-body">
+        <form id="changePwForm">
+          <div class="form container">
+            <label for="password"><b>Old Password</b></label>
+            <input type="password" placeholder="Enter Old Password" name="password" id="password" required>
+
+            <label for="newPassword"><b>New Password</b></label>
+            <input type="password" placeholder="Enter Password" name="newPassword" id="newPassword" required>
+
+            <label for="repeatPassword"><b>Re-enter Password</b></label>
+            <input type="password" placeholder="Re-enter Password" name="repeatPassword" id="repeatPassword" required>
+          </div>
+
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button id="changePassBtn">Change Password</button>
+        <button class="cancelbtn" id="cancelChangePassBtn">cancel</button>
+      </div>
+    </div>
+  </div>
+
+
+</body>
+
 </html>

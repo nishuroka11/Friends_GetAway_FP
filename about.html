@@ -36,7 +36,7 @@
           data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
           aria-label="Toggle navigation">
           <!-- <span class="navbar-toggler-icon fa icon-expand fa-bars"></span>
-            <span class="navbar-toggler-icon fa icon-close fa-times"></span> -->
+              <span class="navbar-toggler-icon fa icon-close fa-times"></span> -->
           <i class="icofont-navigation-menu"></i>
         </button>
 
@@ -52,13 +52,7 @@
               <a class="nav-link" href="destination.html">Destinations</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="hotel-booking.html">Hotel Booking</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="myBookings.html">My Bookings</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="pricing.html">Packages</a>
+              <a class="nav-link" href="packages.html">Packages</a>
             </li>
 
             <li class="nav-item">
@@ -273,36 +267,6 @@
       </div>
     </div>
   </div>
-
-  <!-- for banner  -->
-  <script>
-    let slideIndex = 1;
-    showSlides(slideIndex);
-
-    function plusSlides(n) {
-      showSlides((slideIndex += n));
-    }
-
-    function currentSlide(n) {
-      showSlides((slideIndex = n));
-    }
-
-    function showSlides(n) {
-      let i;
-      let slides = document.getElementsByClassName("mySlides");
-      if (n > slides.length) {
-        slideIndex = 1;
-      }
-      if (n < 1) {
-        slideIndex = slides.length;
-      }
-      for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-      }
-
-      slides[slideIndex - 1].style.display = "block";
-    }
-  </script>
 </body>
 
 </html>
