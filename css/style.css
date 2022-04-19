@@ -2,13 +2,18 @@
 * {
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
-.container {
+/* .container {
   width: 1178px;
   padding-right: 15px;
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
+} */
+.container{
+  width: 80%;
+  margin: auto;
 }
 ul li {
   list-style: none;
