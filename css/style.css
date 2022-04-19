@@ -343,6 +343,7 @@ header {
   align-items: center;
   justify-content: space-between;
   padding: 0.5rem 1rem;
+  background: white;
 }
 
 .navbar .container,
@@ -1166,7 +1167,7 @@ ul.breadcrumbs-custom-path li a {
   }
 
   .travel-about-breadcrumb {
-    margin-top: 68px;
+    margin-top: 100px;
   }
 }
 
