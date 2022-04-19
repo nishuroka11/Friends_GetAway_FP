@@ -149,9 +149,9 @@
 }
 
 @media (min-width: 992px) {
-    .text-lg-center {
-        text-align: center !important;
-    }
+  .text-lg-center {
+    text-align: center !important;
+  }
   .mt-lg-0,
   .my-lg-0 {
     margin-top: 0 !important;
@@ -285,7 +285,6 @@
 @media screen and (max-width: 834px) {
   .travel-footer .travel-footer-16-main h3 {
     margin-bottom: 18px;
-    
   }
   .main-title {
     font-size: 25px;
@@ -297,5 +296,23 @@
   .mySlides img {
     vertical-align: middle;
     height: 30em;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .main-wrapper {
+    width: 100%;
+  }
+  .nav-wrapper {
+    display: none;
+    /* flex-wrap: wrap; */
+  }
+
+  .nav-wrapper.responsive {
+    display: block;
+  }
+
+  .nav-bar li {
+    float: none;
   }
 }

@@ -34,32 +34,33 @@
 
         <button class="navbar-toggler collapsed bg-gradient" type="button" data-toggle="collapse"
           data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
-          aria-label="Toggle navigation">
-          <!-- <span class="navbar-toggler-icon fa icon-expand fa-bars"></span>
-              <span class="navbar-toggler-icon fa icon-close fa-times"></span> -->
+          aria-label="Toggle navigation" onclick="toggleNav()">
           <i class="icofont-navigation-menu"></i>
         </button>
 
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="about.html">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="destination.html">Destinations</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="packages.html">Packages</a>
-            </li>
+        <div class="nav-wrapper" id="topNav">
+          <div class="nav-bar">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="destination.html">Destinations</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="packages.html">Packages</a>
+              </li>
 
-            <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contact</a>
-            </li>
-          </ul>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact</a>
+              </li>
+            </ul>
+          </div>
         </div>
+
         <div class="d-lg-block d-none" id="login-block">
           <a href="login.html" class="btn btn-style btn-secondary">Login</a>
           <a href="registration.html" class="btn btn-style btn-secondary">Register</a>
@@ -536,6 +537,16 @@
       }
 
       slides[slideIndex - 1].style.display = "block";
+    }
+  </script>
+  <script>
+    function toggleNav() {
+      var x = document.getElementById("topNav");
+      if (x.className === "nav-wrapper") {
+        x.className += " responsive";
+      } else {
+        x.className = "nav-wrapper";
+      }
     }
   </script>
 </body>
