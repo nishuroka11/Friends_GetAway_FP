@@ -17,8 +17,12 @@
   <link href="css/style.css" rel="stylesheet" />
   <link href="css/responsive.css" rel="stylesheet" />
 
+<<<<<<< HEAD
   <!-- js -->
   <script src="js/index.js" defer></script>
+=======
+  <script src="js/index.js" defer></script>s
+>>>>>>> 332e79dd6c081c9d51a85ceee9901a0ee52a80fd
 
   <title>Get Away</title>
 </head>
@@ -31,6 +35,7 @@
           <a class="navbar-brand mr-lg-5" href="index.html"> Get Away </a>
           <!-- <a href="javascript:void(0);" class="icon" onclick="toggleNav()"><i class="icofont-navigation-menu"></i></a> -->
         </h1>
+<<<<<<< HEAD
 
         <button class="navbar-toggler collapsed bg-gradient" type="button" data-toggle="collapse"
           data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
@@ -91,6 +96,66 @@
             <li class="active"><i class="icofont-arrow-right"></i> About </li>
           </ul>
         </div>
+=======
+
+        <button class="navbar-toggler collapsed bg-gradient" type="button" data-toggle="collapse"
+          data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <!-- <span class="navbar-toggler-icon fa icon-expand fa-bars"></span>
+            <span class="navbar-toggler-icon fa icon-close fa-times"></span> -->
+          <i class="icofont-navigation-menu"></i>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="services.html">Destinations</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pricing.html">Packages</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+        <div class="d-lg-block d-none" id="login-block">
+          <a href="login.html" class="btn btn-style btn-secondary">Login</a>
+          <a href="registration.html" class="btn btn-style btn-secondary">Register</a>
+        </div>
+        <div class="d-lg-block d-none" id="loggedIn-block">
+          <div class="dropdown">
+            <span class="d-flex"><i class="icofont-ui-user" style="padding-right: 10px"></i>
+              <p>Hi <span id="userName"></span></p>
+            </span>
+            <div class="dropdown-content">
+              <a id="openModal">Change Password</a>
+              <a id="logout">Logout</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <section class="main-body my-about">
+    <section class="travel-about-breadcrumb text-left">
+      <div class="breadcrumb-bg breadcrumb-bg-about py-sm-5 py-4">
+        <div class="container py-2">
+          <h2 class="title">About Us</h2>
+          <ul class="breadcrumbs-custom-path mt-2">
+            <li><a href="#url">Home</a></li>
+            <li class="active"><i class="icofont-arrow-right"></i> About </li>
+          </ul>
+        </div>
+>>>>>>> 332e79dd6c081c9d51a85ceee9901a0ee52a80fd
       </div>
     </section>
   </section>
@@ -213,6 +278,7 @@
               </form>
               <p>Sign up for our latest news &amp; articles. We won’t give you spam mails.</p>
             </div>
+<<<<<<< HEAD
           </div>
         </div>
         <div class="d-flex below-section justify-content-between align-items-center pt-4 mt-5">
@@ -271,4 +337,94 @@
   </script>
 </body>
 
+=======
+          </div>
+        </div>
+        <div class="d-flex below-section justify-content-between align-items-center pt-4 mt-5">
+          <div class="columns text-lg-left text-center">
+            <p>© 2020 Get Away. All rights reserved.Design by <a href="#" target="_blank">
+                F. R. I. E. N. D. S</a>
+            </p>
+          </div>
+          <div class="columns-2 mt-lg-0 mt-3">
+            <ul class="social">
+              <li><a href="#facebook"><i class="icofont-facebook"></i></a>
+              </li>
+              <li><a href="#linkedin"><i class="icofont-linkedin"></i></span></a>
+              </li>
+              <li><a href="#twitter"><i class="icofont-twitter"></i></span></a>
+              </li>
+              <li><a href="#google"><i class="icofont-google-plus"></i></span></a>
+              </li>
+              <li><a href="#github"><i class="icofont-github"></i></span></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- The Modal -->
+  <div id="myModal" class="modal">
+
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="close">&times;</span>
+        <h2>Change Password</h2>
+      </div>
+      <div class="modal-body">
+        <form id="changePwForm">
+          <div class="form container">
+            <label for="password"><b>Old Password</b></label>
+            <input type="password" placeholder="Enter Old Password" name="password" id="password" required>
+
+            <label for="newPassword"><b>New Password</b></label>
+            <input type="password" placeholder="Enter Password" name="newPassword" id="newPassword" required>
+
+            <label for="repeatPassword"><b>Re-enter Password</b></label>
+            <input type="password" placeholder="Re-enter Password" name="repeatPassword" id="repeatPassword" required>
+          </div>
+
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button id="changePassBtn">Change Password</button>
+        <button class="cancelbtn" id="cancelChangePassBtn">cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- for banner  -->
+  <script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides((slideIndex += n));
+    }
+
+    function currentSlide(n) {
+      showSlides((slideIndex = n));
+    }
+
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      if (n > slides.length) {
+        slideIndex = 1;
+      }
+      if (n < 1) {
+        slideIndex = slides.length;
+      }
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+
+      slides[slideIndex - 1].style.display = "block";
+    }
+  </script>
+</body>
+
+>>>>>>> 332e79dd6c081c9d51a85ceee9901a0ee52a80fd
 </html>
