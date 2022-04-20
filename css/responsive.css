@@ -83,20 +83,19 @@
     padding-right: 0;
     padding-left: 0;
   }
-  .nav-wrapper{
+  .nav-wrapper {
     position: absolute;
     top: 106px;
     left: 0;
     width: 95%;
     background-color: #fff;
-}
+  }
 }
 
 @media (min-width: 768px) {
   .mt-md-0,
   .my-md-0 {
     margin-top: 0 !important;
-  
   }
   .col-md-4 {
     flex: 0 0 33.33333%;
@@ -348,6 +347,28 @@
   .travel-footer .subscribe button {
     width: 20%;
   }
+
+  .travel-contact .contact-grids input,
+  .travel-contact .contact-grids textarea {
+    font-weight: normal;
+    font-style: normal;
+    font-family: inherit;
+    border: none;
+    color: var(--heading-color);
+    font-size: 16px;
+    width: 86%;
+    height: 55px;
+    background: var(--bg-color);
+    padding: 0px 20px;
+    outline: none;
+    border-radius: var(--border-radius);
+    border-width: 1px;
+    border-style: solid;
+    border-color: var(--border-color);
+    -o-border-image: initial;
+    border-image: initial;
+    margin-bottom: 10px;
+  }
 }
 
 @media screen and (max-width: 640px) {
@@ -465,9 +486,9 @@
 }
 
 @media only screen and (max-width: 800px) {
-    .controls .btn-style{
-        width: 100%;
-    }
+  .controls .btn-style {
+    width: 100%;
+  }
   .nav-wrapper {
     display: none;
     /* flex-wrap: wrap; */
